@@ -10,7 +10,7 @@ Steps to do:
 6) See that container works
 
 
-Procedure of *sysbench* perfomrance testing:
+Procedure of *sysbench* performance testing:
 
 1) start the container ./cont.out
 2) **CPU testig:** sysbench --test=cpu --cpu-max-prime=20000 run
@@ -27,7 +27,9 @@ sysbench --num-threads=16 --test=fileio --file-total-size=10G --file-test-mode=r
 sysbench --num-threads=16 --test=fileio --file-total-size=10G --file-test-mode=rndrd run
 
 sysbench --num-threads=16 --test=fileio --file-total-size=10G --file-test-mode=rndrd cleanup
+
 5) **Memory test:**
 sysbench --test=memory --memory-total-size=10G run
+
 6) **Thread test:**
 sysbench --num-threads=64 --test=threads --thread-yields=1000 --thread-locks=8 run
