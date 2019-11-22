@@ -15,6 +15,7 @@ Procedure of *sysbench* performance testing:
 1) start the container ./cont.out
 2) **CPU testig:** sysbench --test=cpu --cpu-max-prime=20000 run
 3) **File I/O write:** 
+
 sysbench --num-threads=16 --test=fileio --file-total-size=3G --file-test-mode=rndwr prepare
 
 sysbench --num-threads=16 --test=fileio --file-total-size=3G --file-test-mode=rndwr run
@@ -22,6 +23,7 @@ sysbench --num-threads=16 --test=fileio --file-total-size=3G --file-test-mode=rn
 sysbench --num-threads=16 --test=fileio --file-total-size=3G --file-test-mode=rndwr cleanup
 
 4) **File I/O write:**
+
 sysbench --num-threads=16 --test=fileio --file-total-size=10G --file-test-mode=rndrd prepare
 
 sysbench --num-threads=16 --test=fileio --file-total-size=10G --file-test-mode=rndrd run
